@@ -1,0 +1,101 @@
+﻿<Window x:Class="CashUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CashUI"
+        mc:Ignorable="d"
+        Icon="Images/small-icon.png"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="600" MinWidth="1200"
+        Title="CashCoin - Personal Wallet" 
+        Height="600" Width="1200" Background="LightGray">
+    <Grid>
+        <Border VerticalAlignment="Top">
+            <StackPanel>
+                <Menu FontSize="14">
+                    <MenuItem Header="File" Margin="20 0 20 0">
+                        <MenuItem Header="New"/>
+                        <MenuItem Header="Open"/>
+                        <Separator/>
+                        <MenuItem Header="Close">
+                            <MenuItem Header="Close and save"/>
+                            <MenuItem Header="Close without save"/>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Settings" Margin="0 0 20 0">
+                        <MenuItem Header="Background">
+                            <MenuItem Header="Default" x:Name="Default_Color" Click="Default_Color_Click"/>
+                            <MenuItem Header="Blue" x:Name="Blue_Color" Click="Blue_Color_Click"/>
+                            <MenuItem Header="Red" x:Name="Red_Color" Click="Red_Color_Click"/>
+                            <MenuItem Header="Green" x:Name="Green_Color" Click="Green_Color_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="Language">
+                            <MenuItem Header="English"/>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="Time">
+                            <MenuItem Header="Show time using"/>
+                            <MenuItem Header="Reset time using"/>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Help" Margin="0 0 20 0">
+                        <MenuItem Header="Setup"/>
+                        <MenuItem Header="Technical help"/>
+                        <Separator/>
+                        <MenuItem Header="Send opinion" Margin="0 0 20 0">
+                            <MenuItem Header="Problem"/>
+                            <MenuItem Header="Suggestion"/>
+                            <Separator/>
+                            <MenuItem Header="Settings"/>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="Btn" Grid.Column="0" Grid.Row="1" 
+            Background="Transparent" Foreground="Transparent"
+            BorderThickness="0" Width="100" Margin="20 0 0 0"
+            HorizontalAlignment="Left" Click="Btn_Click">
+                <Image Height="70" Width="90" Source="Images/over.png"/>
+            </Button>
+
+            <Button x:Name="Btn2" Grid.Column="0" Grid.Row="1" 
+        Background="Transparent" Foreground="Transparent"
+        BorderThickness="0" Width="100" Margin="130 0 0 0"
+        HorizontalAlignment="Left" Click="Btn2_Click">
+                <Image Height="70" Width="90" Source="Images/send.png"/>
+            </Button>
+
+            <Button x:Name="Btn3" Grid.Column="0" Grid.Row="1" 
+        Background="Transparent" Foreground="Transparent"
+        BorderThickness="0" Width="100" Margin="240 0 0 0"
+        HorizontalAlignment="Left" Click="Btn3_Click">
+                <Image Height="70" Width="90" Source="Images/receive.png"/>
+            </Button>
+
+            <Button x:Name="Btn4" Grid.Column="0" Grid.Row="1" 
+        Background="Transparent" Foreground="Transparent"
+        BorderThickness="0" Width="100" Margin="350 0 0 0"
+        HorizontalAlignment="Left" Click="Btn4_Click">
+                <Image Height="70" Width="90" Source="Images/transaction.png"/>
+            </Button>
+
+            <Frame x:Name="main" HorizontalAlignment="Left"
+               Height="390" Margin="10,37,0,0"
+               NavigationUIVisibility="Hidden" Grid.Row="2"
+               VerticalAlignment="Top" Width="1162"/>
+        </Grid>
+    </Grid>
+
+</Window>

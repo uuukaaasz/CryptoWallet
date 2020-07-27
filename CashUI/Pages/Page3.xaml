@@ -1,0 +1,60 @@
+﻿<Page x:Class="CashUI.Pages.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CashUI.Pages" 
+      mc:Ignorable="d" d:DesignHeight="519" d:DesignWidth="1252"
+      Title="Page3">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="237*"/>
+            <ColumnDefinition Width="389*"/>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="313*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--StackPanel 1-->
+        <StackPanel Grid.ColumnSpan="4" Grid.Row="1">
+            <Label Content="That is your Bitcoin Address bellow: " HorizontalAlignment="Center" Margin="0 -100 0 0" 
+                   FontWeight="Bold" FontSize="20"/>
+            <TextBox Name="Txt_adr" Height="30" Width="640" Margin="0 -100 0 0" Background="#DDD" 
+                     BorderBrush="Black" FontSize="16" FontWeight="Regular"
+                     Text="1MskWMV7QX5zSCUhrRrEV6ZbXYF7U8Wd59" BorderThickness="1"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        
+        <!--Stack Panel 2-->
+        <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="3">
+            <Button Name="QR" Click="QR_Click" Height="40" Width="40" Margin="-690 27 0 0">
+            <Image Source="/CashUI;component/Images/QR.png"/>
+            </Button>
+            <Button Name="Refresh" Click="Refresh_Click" Height="40" Width="40" Margin="690 -43 0 0">
+                <Image Source="/CashUI;component/Images/refresh.png"/>
+            </Button>
+            <Image Name="imgQRCode" Width="200" Height="200" HorizontalAlignment="Center" Margin="0 10 0 0"
+                   VerticalAlignment="Center" Source="/CashUI;component/Images/CodeQR.png"/>
+        </StackPanel>
+
+        <!--Stack Panel 3-->
+        <StackPanel Grid.ColumnSpan="4" Grid.Row="3">
+            <TextBox Height="30" Width="240" Margin="100,40,401,0" Background="DarkGray" 
+                 Text="7 years and 13 weeks behind" FontSize="18"/>
+            <Label Content="Synchronising with network..."
+               FontSize="18" Margin="10,-30,833,0"/>
+        </StackPanel>
+
+        <!--Stack Panel 4-->
+        <StackPanel Grid.Column="3" Grid.Row="3"
+               HorizontalAlignment="Right" Margin="0 10 10 10">
+            <Image Source="/CashUI;component/Images/main-symbol.png" Height="auto" Width="200"/>
+        </StackPanel>
+    </Grid>
+</Page>
